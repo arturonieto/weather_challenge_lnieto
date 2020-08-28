@@ -43,3 +43,10 @@
         .col-md-7
           %h3 Looking for another city?
           %input{ type: "text", class: "city_searcher" }
+    .comoseanoim
+      - @countries.each do |key, value|
+        ="#{value} , #{key}"
+
+
+
+
