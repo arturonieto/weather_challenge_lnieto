@@ -9,10 +9,13 @@ gem 'sqlite3'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'therubyracer'
+gem 'mini_racer'
 gem 'geocoder'
-
+gem 'jquery-rails'
+gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'coffee-rails'
 gem 'jbuilder', '~> 2.5'
+gem 'haml-rails', '~> 2.0'
 
 gem 'openweather2'
 
