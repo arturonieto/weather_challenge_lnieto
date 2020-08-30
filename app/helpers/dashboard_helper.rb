@@ -1,6 +1,6 @@
 module DashboardHelper
 
-  def x_get_city_weather(city_name)
+  def get_city_weather(city_name)
     city_weather = Openweather2.get_weather(city: city_name, units: 'metric')
     f_temperature = get_farenheit(city_weather)
 

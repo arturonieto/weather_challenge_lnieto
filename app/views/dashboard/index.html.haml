@@ -4,48 +4,46 @@
       .row.justify-content-md-center
         .col-md-7
           %h1
-            Weather for #{@weather[:city_weather].city}
+            Weather for
+            %span.city_name #{@weather[:city_weather].city}
           %h2
-            = @weather[:city_weather].temperature
+            %span.city_temperature= @weather[:city_weather].temperature
             ºC
           %h2
-            = @weather[:f_temperature][:temperature]
+            %span.city_temperature_f= @weather[:f_temperature][:temperature]
             ºF
       .row.justify-content-md-center
         .col-md-4
           %h4 Pressure
         .col-md-3.text-right
-          %h5= "#{ @weather[:city_weather].pressure } hpa"
+          %h5.pressure= "#{ @weather[:city_weather].pressure } hpa"
       .row.justify-content-md-center
         .col-md-4
           %h4 Humidity
         .col-md-3.text-right
-          %h5= "#{ @weather[:city_weather].humidity } %"
+          %h5.humidity= "#{ @weather[:city_weather].humidity } %"
       .row.justify-content-md-center
         .col-md-4
           %h4 Min Temperature
         .col-md-3.text-right
-          %h5= "#{ @weather[:city_weather].min_temperature } ºC"
-          %h5= "#{ @weather[:f_temperature][:min] } ºF"
+          %h5.min_celcius= "#{ @weather[:city_weather].min_temperature } ºC"
+          %h5.min_farenheit= "#{ @weather[:f_temperature][:min] } ºF"
       .row.justify-content-md-center
         .col-md-4
           %h4 Max Temperature
         .col-md-3.text-right
-          %h5= "#{ @weather[:city_weather].max_temperature } ºC"
-          %h5= "#{ @weather[:f_temperature][:max] } ºF"
+          %h5.max_celcius= "#{ @weather[:city_weather].max_temperature } ºC"
+          %h5.max_farenheit= "#{ @weather[:f_temperature][:max] } ºF"
       .row.justify-content-md-center
         .col-md-4
           %h4 Wind Speed
         .col-md-3.text-right
-          %h5= "#{ @weather[:city_weather].wind_speed } mi/h"
-    .city_searcher
+          %h5.wind_speed= "#{ @weather[:city_weather].wind_speed } km/h"
+    .city_searcher.ui-widget
       .row.justify-content-md-center
         .col-md-7
           %h3 Looking for another city?
-          %input{ type: "text", class: "city_searcher" }
-    .comoseanoim
-      - @countries.each do |key, value|
-        ="#{value} , #{key}"
+          %input{ type: "text", class: "city_searcher_x", :data => { :available_countries => @cities } }
 
 
 
