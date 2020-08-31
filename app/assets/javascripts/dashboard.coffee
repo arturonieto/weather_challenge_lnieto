@@ -29,12 +29,12 @@ $ ->
         type: 'GET'
         data: { city_name: ui.item.value }
         error: ->
-          $('h1.main_title').hide()
-          $('h1.main_title').html('City not found').css('color', 'red')
-          $('h1.main_title').fadeIn(1000)
+          $('.city_name').hide()
+          $('.city_name').html('Not found').css('color', 'red')
+          $('.city_name').fadeIn(1000)
         success: (data) ->
           $('.dashboard_index .current_city').hide()
-          $('.city_name').html(data.city_and_country)
+          $('.city_name').html(data.city_and_country).css('color', 'black')
           $('.city_temperature').html(data.city_weather.temperature)
           $('.city_temperature_f').html(data.f_temperature.temperature)
           $('.pressure').html(data.city_weather.pressure + ' hpa')
