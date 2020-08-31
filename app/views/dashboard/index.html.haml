@@ -42,7 +42,7 @@
       .row.justify-content-md-center
         .col-md-6
           %div{class: "add_to_fav_form", style: "display:#{@weather[:is_fav] ? 'none' : ''}" }
-            %button.add_to_fav Add city to fav
+            %button.add_to_fav Add city to favorites
             = hidden_field_tag "name", "#{@weather[:city_and_country]}"
     .city_searcher.ui-widget
       .row.justify-content-md-center
