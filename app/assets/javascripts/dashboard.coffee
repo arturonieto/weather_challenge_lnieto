@@ -13,9 +13,9 @@ $ ->
       type: 'POST'
       data: { city_name: city_name }
       error: ->
-        $('h1.main_title').hide()
-        $('h1.main_title').html('Could not add city to favorites').css('color', 'red')
-        $('h1.main_title').fadeIn(1000)
+        $('.city_name').hide()
+        $('.city_name').html('City not added ERR').css('color', 'red')
+        $('.city_name').fadeIn(1000)
       success: (data) ->
         $('.favorite_cities').load '/dashboard/get_fav_cities'
         $('.add_to_fav_form').hide()
