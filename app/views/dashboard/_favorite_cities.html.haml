@@ -1,0 +1,38 @@
+- @favorite_weathers.each do |fav_weather|
+  .fav_city
+    .row.justify-content-md-center
+      .col-md-6
+        %h1 Weather for #{fav_weather[:city_and_country]}
+        %h2 #{fav_weather[:city_weather].temperature} ºC
+        %h2 #{fav_weather[:f_temperature][:temperature]} ºF
+      .col-md-1.text-right
+        = form_tag remove_city_from_favorites_path, class: 'delete_form', method: :post, remote: true do
+          = hidden_field_tag 'name', fav_weather[:city_and_country]
+          = submit_tag "Remove"
+    .row.justify-content-md-center
+      .col-md-4
+        %h4 Pressure
+      .col-md-3.text-right
+        %h5.fav_pressure= "#{ fav_weather[:city_weather].pressure } hpa"
+    .row.justify-content-md-center
+      .col-md-4
+        %h4 Humidity
+      .col-md-3.text-right
+        %h5.fav_humidity= "#{ fav_weather[:city_weather].humidity } %"
+    .row.justify-content-md-center
+      .col-md-4
+        %h4 Min Temperature
+      .col-md-3.text-right
+        %h5.fav_min_celcius= "#{ fav_weather[:city_weather].min_temperature } ºC"
+        %h5.fav_min_farenheit= "#{ fav_weather[:f_temperature][:min] } ºF"
+    .row.justify-content-md-center
+      .col-md-4
+        %h4 Max Temperature
+      .col-md-3.text-right
+        %h5.fav_max_celcius= "#{ fav_weather[:city_weather].max_temperature } ºC"
+        %h5.fav_max_farenheit= "#{ fav_weather[:f_temperature][:max] } ºF"
+    .row.justify-content-md-center
+      .col-md-4
+        %h4 Wind Speed
+      .col-md-3.text-right
+        %h5.fav_wind_speed= "#{ fav_weather[:city_weather].wind_speed } km/h"

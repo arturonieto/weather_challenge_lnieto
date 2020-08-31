@@ -1,0 +1,2 @@
+class FavoriteCity < ApplicationRecord
+end

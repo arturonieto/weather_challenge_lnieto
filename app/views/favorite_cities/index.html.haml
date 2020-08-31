@@ -1,0 +1,19 @@
+%h1 Listing favorite_cities
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @favorite_cities.each do |favorite_city|
+      %tr
+        %td= link_to 'Show', favorite_city
+        %td= link_to 'Edit', edit_favorite_city_path(favorite_city)
+        %td= link_to 'Destroy', favorite_city, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Favorite city', new_favorite_city_path

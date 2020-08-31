@@ -6,7 +6,9 @@ module DashboardHelper
 
     {
       city_weather: city_weather,
-      f_temperature: f_temperature
+      city_and_country: city_name,
+      f_temperature: f_temperature,
+      is_fav: FavoriteCity.exists?(name: city_name)
     }
   end 
 
@@ -17,4 +19,5 @@ module DashboardHelper
       temperature: '%2.f' % ( city_weather.temperature * 9/5.to_d + 32 )
     }
   end
+
 end
