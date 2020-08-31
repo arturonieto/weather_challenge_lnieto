@@ -13,31 +13,31 @@
             %span.city_temperature_f= @weather[:f_temperature][:temperature]
             ºF
       .row.justify-content-md-center
-        .col-md-4
+        .col-md-4.text-right
           %h4 Pressure
-        .col-md-3.text-right
+        .col-md-3.text-left
           %h5.pressure= "#{ @weather[:city_weather].pressure } hpa"
       .row.justify-content-md-center
-        .col-md-4
+        .col-md-4.text-right
           %h4 Humidity
-        .col-md-3.text-right
+        .col-md-3.text-left
           %h5.humidity= "#{ @weather[:city_weather].humidity } %"
       .row.justify-content-md-center
-        .col-md-4
+        .col-md-4.text-right
           %h4 Min Temperature
-        .col-md-3.text-right
+        .col-md-3.text-left
           %h5.min_celcius= "#{ @weather[:city_weather].min_temperature } ºC"
           %h5.min_farenheit= "#{ @weather[:f_temperature][:min] } ºF"
       .row.justify-content-md-center
-        .col-md-4
+        .col-md-4.text-right
           %h4 Max Temperature
-        .col-md-3.text-right
+        .col-md-3.text-left
           %h5.max_celcius= "#{ @weather[:city_weather].max_temperature } ºC"
           %h5.max_farenheit= "#{ @weather[:f_temperature][:max] } ºF"
       .row.justify-content-md-center
-        .col-md-4
+        .col-md-4.text-right
           %h4 Wind Speed
-        .col-md-3.text-right
+        .col-md-3.text-left
           %h5.wind_speed= "#{ @weather[:city_weather].wind_speed } km/h"
       .row.justify-content-md-center
         .col-md-6
