@@ -44,7 +44,7 @@ $ ->
           $('.max_farenheit').html(data.f_temperature.max + ' ºF')
           $('.min_farenheit').html(data.f_temperature.min + ' ºF')
           $('.wind_speed').html(data.city_weather.wind_speed + ' km/h')
-          $('input[name=name]').val(data.city_and_country)
+          $('.current_city input[name=name]').val(data.city_and_country)
           $('.dashboard_index .current_city').fadeIn( 1000 )
           if !data.is_fav
             $('.add_to_fav_form').show()
