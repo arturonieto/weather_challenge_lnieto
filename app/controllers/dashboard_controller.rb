@@ -1,6 +1,5 @@
 class DashboardController < ApplicationController
 
-  require 'open-uri'
   include DashboardHelper
 
   def index
